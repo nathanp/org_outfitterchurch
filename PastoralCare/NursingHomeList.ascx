@@ -15,7 +15,7 @@
 
             <div class="panel panel-block">
                 <div class="panel-heading">
-                    <h1 class="panel-title"><i class="fa fa-wheelchair"></i> Rehab List</h1>
+                    <h1 class="panel-title"><i class="fa fa-wheelchair"></i> Assisted Living List</h1>
                 </div>
                 <Rock:Grid ID="gReport" runat="server" AllowSorting="true" EmptyDataText="No Results" DataKeyNames="Id" OnRowSelected="gReport_RowSelected">
                     <Columns>

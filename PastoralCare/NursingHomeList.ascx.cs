@@ -54,9 +54,9 @@ namespace RockWeb.Plugins.org_hbcfw.PastoralCare
     /// Block to execute a sql command and display the result (if any).
     /// </summary>
     [ContextAware( typeof( Person ) )]
-    [DisplayName( "Rehab List" )]
+    [DisplayName( "Assisted Living List" )]
     [Category( "org_hbcfw > Pastoral Care" )]
-    [Description( "A summary of all the current nursing home residents that have been reported to Pastoral Care." )]
+    [Description( "A summary of all the current assisted living residents that have been reported to Pastoral Care." )]
     [WorkflowTypeField( "Nursing Home Resident Workflow" )]
     [DefinedTypeField( "Nursing Home List" )]
     public partial class NursingHomeList : RockBlock
