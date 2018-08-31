@@ -49,6 +49,7 @@
                                             var mdoID = '36';
                                             var eventRental = '39';
                                             var kenyaTrip = '47';
+                                            var mensMinistry = '49';
 
                                             // hide comment box by default
                                             $(".rock-text-box").hide();
@@ -65,6 +66,8 @@
                                             $('a[data-id="' + eventRental + '"]').hide();
                                             //hide Kenya Trip option from dropdown
                                             $('a[data-id="' + kenyaTrip + '"]').hide();
+                                            //hide Men's Ministry option from dropdown
+                                            $('a[data-id="' + mensMinistry + '"]').hide();
                                         </script>
 
                                         <div class="form-group">
