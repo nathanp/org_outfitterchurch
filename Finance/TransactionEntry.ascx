@@ -48,13 +48,6 @@
                                             var commentID = '5';
                                             var commentBox = $('.rock-text-box .control-wrapper input[type="text"]');
 
-                                            var dessertAuction = '30';
-                                            var mdoID = '36';
-                                            var eventRental = '39';
-                                            var kenyaTrip = '47';
-                                            var mensMinistry = '49';
-                                            var givingTuesday = '53';
-
                                             // hide comment box by default
                                             $(".rock-text-box").hide();
                                             // show comment box on click
@@ -62,18 +55,6 @@
                                                 $(".rock-text-box").show();
                                                 //future - modify the textCommentEntry to be required
                                             });
-                                            //hide Dessert Auction option from dropdown
-                                            $('a[data-id="' + dessertAuction + '"]').hide();
-                                            //hide MDO option from dropdown
-                                            $('a[data-id="' + mdoID + '"]').hide();
-                                            //hide Event Rental option from dropdown
-                                            $('a[data-id="' + eventRental + '"]').hide();
-                                            //hide Kenya Trip option from dropdown
-                                            $('a[data-id="' + kenyaTrip + '"]').hide();
-                                            //hide Men's Ministry option from dropdown
-                                            $('a[data-id="' + mensMinistry + '"]').hide();
-                                            //hide Men's Ministry option from dropdown
-                                            $('a[data-id="' + givingTuesday + '"]').hide();
                                         </script>
 
                                         <div class="form-group">
