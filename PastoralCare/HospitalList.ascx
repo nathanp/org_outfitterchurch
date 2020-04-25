@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="HospitalList.ascx.cs" Inherits="RockWeb.Plugins.org_hbcfw.PastoralCare.HospitalList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="HospitalList.ascx.cs" Inherits="RockWeb.Plugins.org_secc.PastoralCare.HospitalList" %>
 
 <asp:UpdatePanel ID="upReport" runat="server">
     <ContentTemplate>
@@ -24,7 +24,7 @@
                         <Rock:PersonField DataField="PersonToVisit" HeaderText="Person To Visit" SortExpression="Person.LastName" />
                         <Rock:RockBoundField DataField="Age" HeaderText="Age" SortExpression="Age"></Rock:RockBoundField>
                         <Rock:RockBoundField DataField="Room" HeaderText="Room" SortExpression="Room"></Rock:RockBoundField>
-                        <Rock:RockBoundField DataField="AdmitDate" HeaderText="Admit Date" SortExpression="AdmitDate"></Rock:RockBoundField>
+                        <Rock:RockBoundField DataField="AdmitDate" DataFormatString="{0:MM/dd/yyyy}" HeaderText="Admit Date" SortExpression="AdmitDate"></Rock:RockBoundField>
                         <Rock:RockBoundField DataField="Description" HeaderText="Description" SortExpression="Description"></Rock:RockBoundField>
                         <Rock:RockBoundField DataField="Visits" HeaderText="Visits" SortExpression="Visits"></Rock:RockBoundField>
                         <Rock:RockBoundField DataField="LastVisitor" HeaderText="Last Visitor" SortExpression="LastVisitor"></Rock:RockBoundField>
@@ -36,7 +36,7 @@
                                 <span class="label <%# Convert.ToString(Eval("Status"))=="Active"?"label-success":"label-default" %>"><%# Eval("Status") %></span>
                             </ItemTemplate>
                         </Rock:RockTemplateField>
-                        <Rock:BoolField DataField="Communion" HeaderText="Flowers" SortExpression="Flowers" />
+                        <Rock:BoolField DataField="Communion" HeaderText="Com." SortExpression="Communion" />
                         <Rock:RockTemplateField HeaderText="Actions" ItemStyle-Width="160px">
                             <ItemTemplate>
                                 <a href="<%# "https://maps.google.com/?q="+Eval("HospitalAddress").ToString() %>" target="_blank" class="btn btn-default"><i class="fa fa-map-o" title="View Map"></i></a>

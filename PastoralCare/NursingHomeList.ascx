@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="NursingHomeList.ascx.cs" Inherits="RockWeb.Plugins.org_hbcfw.PastoralCare.NursingHomeList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="NursingHomeList.ascx.cs" Inherits="RockWeb.Plugins.org_secc.PastoralCare.NursingHomeList" %>
 
 <asp:UpdatePanel ID="upReport" runat="server">
     <ContentTemplate>
@@ -15,7 +15,7 @@
 
             <div class="panel panel-block">
                 <div class="panel-heading">
-                    <h1 class="panel-title"><i class="fa fa-wheelchair"></i> Assisted Living List</h1>
+                    <h1 class="panel-title"><i class="fa fa-wheelchair"></i> Nursing Home List</h1>
                 </div>
                 <Rock:Grid ID="gReport" runat="server" AllowSorting="true" EmptyDataText="No Results" DataKeyNames="Id" OnRowSelected="gReport_RowSelected">
                     <Columns>
@@ -23,7 +23,7 @@
                         <Rock:PersonField DataField="Person" HeaderText="Person" SortExpression="Person.LastName" />
                         <Rock:RockBoundField DataField="Person.Age" HeaderText="Age" SortExpression="Person.Age"></Rock:RockBoundField>
                         <Rock:RockBoundField DataField="Room" HeaderText="Room" SortExpression="Room"></Rock:RockBoundField>
-                        <Rock:RockBoundField DataField="AdmitDate" HeaderText="Admit Date" SortExpression="AdmitDate"></Rock:RockBoundField>
+                        <Rock:RockBoundField DataField="AdmitDate" DataFormatString="{0:MM/dd/yyyy}" HeaderText="Admit Date" SortExpression="AdmitDate"></Rock:RockBoundField>
                         <Rock:RockBoundField DataField="Description" HeaderText="Description" SortExpression="Description"></Rock:RockBoundField>
                         <Rock:RockBoundField DataField="Visits" HeaderText="Visits" SortExpression="Visits"></Rock:RockBoundField>
                         <Rock:RockBoundField DataField="LastVisitor" HeaderText="Last Visitor" SortExpression="LastVisitor"></Rock:RockBoundField>
@@ -35,7 +35,7 @@
                                 <span class="label <%# Convert.ToString(Eval("Status"))=="Active"?"label-success":"label-default" %>"><%# Eval("Status") %></span>
                             </ItemTemplate>
                         </Rock:RockTemplateField>
-                        <Rock:BoolField DataField="Communion" HeaderText="Flowers" />
+                        <Rock:BoolField DataField="Communion" HeaderText="Com." />
                         <Rock:RockTemplateField HeaderText="Actions" ItemStyle-Width="160px">
                             <ItemTemplate>
                                 <a href="<%# "https://maps.google.com/?q="+Eval("Address").ToString() %>" target="_blank" class="btn btn-default"><i class="fa fa-map-o" title="View Map"></i></a>
