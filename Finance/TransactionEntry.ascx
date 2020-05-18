@@ -43,19 +43,7 @@
                                         <Rock:ButtonDropDownList ID="btnAddAccount" runat="server" Visible="false" Label=" "
                                             DataTextField="PublicName" DataValueField="Id" OnSelectionChanged="btnAddAccount_SelectionChanged" />
 
-                                        <script>
-                                            /*Only show and require comment box if certain account ID is selected from the dropdown*/
-                                            var commentID = '5';
-                                            var commentBox = $('.rock-text-box .control-wrapper input[type="text"]');
-
-                                            // hide comment box by default
-                                            $(".rock-text-box").hide();
-                                            // show comment box on click
-                                            $('a[data-id="' + commentID + '"]').click(function (event) {
-                                                $(".rock-text-box").show();
-                                                //future - modify the textCommentEntry to be required
-                                            });
-                                        </script>
+                                        
 
                                         <div class="form-group">
                                             <label runat="server" id="lblTotalAmountLabel">Total</label>
